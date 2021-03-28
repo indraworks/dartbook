@@ -1,0 +1,31 @@
+/*
+catatan:
+jadi di dart kalau variable  dlm kelas dibuat private maka 
+kita tinggal buat tanda _ _variable otomatis nnti sudah jadi private 
+gak seperti bahasa program yg lain yg harus kasih atribute provate
+nah otomatis di  program utama gak bisa access acra accessnya dgn perintah getter
+dan setter yaitu sbuah function utk return kan variable pribvate menjadi 
+public
+nah gimana dgn fucntionnya yg didalam ada variable private caranya direturn dulu
+ke variable dan nnati ada lagi variable public yg menampung hasilnya
+ini cara getternya ok kita praktekan semua variable dibuat private di class parent
+
+*/
+/*
+catatan disini di Medd_App dic ini kita belajar tetang List dan Map
+kita create sbgai variable instance pada class sbgai private 
+dan di declare di constructor utk diisi pada saat object di isntnce
+buat geteer dan setter-nya
+
+//ingat ada 2 cara yg utk class pakai {}
+constructorName({type param_namaVariable ...}) {
+  _name_variable = param_namaVriable
+}
+
+
+constructorName({type param_nameVariable ...}):
+ _name_variable = param_namaVariable,
+ .... {
+   disini biasayany disis  pt=rivate fucntionya 
+ }
+*/
