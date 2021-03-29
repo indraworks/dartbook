@@ -4,7 +4,8 @@ class Person {
   int _hasilAgeDays;
   double _height;
   bool _isEmp;
-  List<String> _allergic; //mmbuat string array
+  List<String> _allergic = []; //mmbuat string 1 array
+
   //utk person yg alergic
   Person(
       String name, int age, double height, bool isEmp, List<String> allergic) {
@@ -16,6 +17,7 @@ class Person {
     _height = height;
     _isEmp = isEmp;
     _allergic = allergic;
+
     _getAgeInDays();
   }
   Person.WhateverNamed(
@@ -82,14 +84,14 @@ class Person {
   // set bool
   set isEmp(bool value) => _isEmp = value;
 
-  List<String> get allergic {
-    return _allergic;
-  }
+  // List<String> get allergic {
+  //   return _allergic;
+  // }
 
-  //utk set gak perlu diisi typenya
-  set allergic(value) {
-    _allergic = value;
-  }
+  // //utk set gak perlu diisi typenya
+  // set allergic(value) {
+  //   _allergic = value;
+  // }
 
   //end cara 2 metod getter
 
@@ -112,8 +114,22 @@ class Person {
     //ini return integer karena di kembalikan pada dunia luar
     return _hasilAgeDays;
   }
-  //nah ini haru ada variable public yg nampung truskan di
-  // func public biar bisa di akses jadi memang 2x kerja
+
+  //alergic btw func yg gak return kita beri void
+  void addAlergy(String value) {
+    _allergic.add(value);
+  }
+
+  void addAlergies(List<String> value) {
+    _allergic.addAll(value);
+  }
+  //utk remov adalah kembalian berupa bool
+  // jika opearasi ok maka true
+
+  bool removeAllergy(String value) {
+    return _allergic.remove(value);
+  }
+  //sudah di buat func helper addAllergy /remove kita praktek di main dart
 }
 
 /*

@@ -59,9 +59,21 @@ void main() {
   // person4.allergic.remove(person4Allergics[1]);
   // print(person4.allergic); //bulu ilang
 
-  //nah assignment 5 anda di suruh buat utk  buat function didalam class 
-  // 
+  //nah assignment 5 anda di suruh buat utk  buat function didalam class
+  // addAlergy,addAlergies,removeAlergy smua adalah private
+  person4.addAlergy('nasi goreng');
+  print(person4.displayPerson());
+  person4.addAlergies(['daging', 'kuda nil']);
+  print('add alergies :');
+  print(person4.displayPerson());
+  print('remove nasi goreng');
+  person4.removeAllergy('nasi goreng');
+  print(person4.displayPerson());
 
+
+
+
+  
 }
 
 /*
