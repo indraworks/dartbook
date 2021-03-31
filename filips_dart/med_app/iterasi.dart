@@ -57,4 +57,12 @@ void main() {
   // }
   //cara yg kedua lebih bagus yaitu dikeluakan dulu waktu diconvert
   //  var pasientList =
+  //kita coba buat class dari Map
+  List<String> person5Allergics = ['bawang', 'bulu', 'debu'];
+  List<String> person6Allergics = ['ulat', 'cacing', 'kelabang'];
+
+  Person person5 = new Person('bambang', 30, 171.6, true, person5Allergics);
+  Person person6 = new Person('tora sudiro', 32, 181.6, true, person6Allergics);
+
+  //kita coba buat :
 }

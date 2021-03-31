@@ -50,8 +50,10 @@ void main() {
   // print(personAllergic);
 
   List<String> person4Allergics = ['bawang', 'bulu', 'debu'];
+  List<String> person5Allergics = ['ulat', 'cacing', 'kelabang'];
 
   Person person4 = new Person('bambang', 30, 171.6, true, person4Allergics);
+  Person person5 = new Person('tora sudiro', 32, 181.6, true, person5Allergics);
 
   //assignment 4: ini disuruh buat hanya add dgn functioanl yg ada
   // person4.allergic.add('tembakau');
@@ -60,7 +62,7 @@ void main() {
   // print(person4.allergic); //bulu ilang
 
   //nah assignment 5 anda di suruh buat utk  buat function didalam class
-  // addAlergy,addAlergies,removeAlergy smua adalah private
+ // addAlergy,addAlergies,removeAlergy smua adalah private
   person4.addAlergy('nasi goreng');
   print(person4.displayPerson());
   person4.addAlergies(['daging', 'kuda nil']);
@@ -69,11 +71,6 @@ void main() {
   print('remove nasi goreng');
   person4.removeAllergy('nasi goreng');
   print(person4.displayPerson());
-
-
-
-
-  
 }
 
 /*
