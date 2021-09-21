@@ -6,6 +6,8 @@ gunakan super utk access properti dari person class
 kemudian utk getter setter dari alergic ada di patient
 */
 
+
+
 class Person {
   String _name;
   int _age;
@@ -33,8 +35,10 @@ class Person {
   setAge(int age) => _age = age;
   setHeight(double height) => _height = height;
   setEmp(bool isEmp) => _isEmp = isEmp;
-
-  displayUserInfo() {
+  //nah ini function kalau mau di pakai oleh
+  //anak/child yg extend padanta maka harus ada return
+  String displayUserInfo() {
     print('Person info : ${_name} ${age} ${height} ${isEmp}');
+    return 'i return this info';
   }
 }

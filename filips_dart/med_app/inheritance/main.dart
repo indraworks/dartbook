@@ -2,7 +2,7 @@
 import 'models/patient.dart';
 import 'models/repository_person.dart';
 import 'models/person.dart';
-import "dart:developer";
+import 'models/iterableMap.dart';
 
 void main() {
   //mbuat instance person s
@@ -25,7 +25,7 @@ void main() {
   Person person4 = new Person('jaya', 19, 157.5, true);
 
   Repository repository = new Repository();
-  debugger();
+
   repository
     ..addPatient(person1) //cascade operator
     ..addPatient(person2)
@@ -36,8 +36,23 @@ void main() {
   // repository.addPatient(person3);
   // repository.addPatient(person4);
 
-  var patientList = repository.patient;
-  patientList.forEach((key, person) {
-    print('key : ${key} person: ${person.displayUserInfo()}');
+  // var patientList = repository.patient;
+  // patientList.forEach((key, person) {
+  //   print('key : ${key} person: ${person.displayUserInfo()}');
+  // });
+
+  // Pasien pasien1 =
+  //     new Pasien('okta', 31, 165.7, true, ['debu', 'pig', 'telur']);
+  // print('ini pasient 1 gunakan function dari parent !:');
+  // pasien1.displayUserInfo();
+
+  //kita mau buat function dimana fnction bersii map,dan function
+  //
+  final persons = repository.patient;
+  print('hasil customForEach :');
+
+  //disini customForEach adalah fucntion helper
+  customForEach(persons, (key, value) {
+    return value.displayUserInfo();
   });
 }

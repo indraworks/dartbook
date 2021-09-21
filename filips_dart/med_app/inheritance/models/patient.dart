@@ -41,9 +41,20 @@ class Pasien extends Person {
   }
 
   //func add Alergy,Alergies,removeAlergy
-  displayPatientInfo() {
-    print(
-        'Patient Info : ${name} ${age} ${height} ${isEmp} illnesAergic: ${_allergics}');
+  // displayPatientInfo() {
+  //   print(
+  //       'Patient Info : ${name} ${age} ${height} ${isEmp} illnesAergic: ${_allergics}');
+  // }
+  //pas kita ketik otomatis kebuat overide ,diterankan di bawah
+  // @override
+  // String displayUserInfo() {
+  //   // TODO: implement displayUserInfo
+  //   return super.displayUserInfo();
+  // }
+  @override
+  String displayUserInfo() {
+    print('$name $age $height $isEmp $allergic');
+    return 'this return';
   }
 }
 
@@ -53,6 +64,44 @@ di kenalkna di constructor
 utk yg lokal seperti diatas patient di declare variable instancenya
 dan di bagian cnsturctor _alergics = alergies ( parameter constructor);
 jadi sprti itulah setingannya baik utk constructor yg biasa atau constrctor yg named. 
+nah pada saat kita ada di patient kita buat functionnya nah 
+dan namnay sama dgn yg parent maka otomatis kita udah daat turnan smua variable dari parent
+manualnya sbgai berikut
+
+ String displayuserInfo() {
+
+   super.displayUserInfo();
+ }
+
+ //nah func diatas kita tambah variable lokal kita yg utk kita print yg belum ada
+ yaitu allerlgics
+sbb:
+String displayUserInfo() {
+  print('Alergics: ${_allergic}');
+  super.displayUserInfo(); //otomati nrpint dari parent namavariablenya 
+
+ //nahh karena fluter udah modern ,maka kita diijinka 
+ //utk kasih tau parent dgn metode 
+ @overide  //artinya mau riding variablenya tadi dp engganti
+           //kata super atau function super tadi agar kita 
+           //bisa inject gabungkan variable lokal sama2 didalam fucntion tsb
+ sbb:
+  @overide
+  String displayUserInfo(){
+    print '$name $age $height $isEmp $allergic'
+    return 'this return';
+  }          
+
+}
+
+
+*/
+
+/*
+overie maksudnya gimana jadi gini di paretn ada function jika mau di pakai oleh 
+anak child yg extend padanya maka dia boleh tulis function parent itu
+nah jgn lupa di kasih super ,nah kalau ada variable yg dari construtor
+lokalnya mau ditampilkan di function ini juga maka :
 
 
 
